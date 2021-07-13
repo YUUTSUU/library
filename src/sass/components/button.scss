@@ -1,0 +1,120 @@
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid $primary;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: $dark;
+  background-color: transparent;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &-block {
+    display: block;
+    width: 100%;
+  }
+
+  &-primary {
+    border-color: $primary;
+    color: $white;
+    background-color: $primary;
+
+    &:hover {
+      background-color: darken($primary, 10%);
+    }
+  }
+
+  &-succes {
+    border-color: $succes;
+    color: $white;
+    background-color: $succes;
+
+    &:hover {
+      background-color: darken($succes, 10%);
+    }
+  }
+
+  &-danger {
+    border-color: $danger;
+    color: $white;
+    background-color: $danger;
+
+    &:hover {
+      background-color: darken($danger, 10%);
+    }
+  }
+
+  &-warning {
+    border-color: $warning;
+    color: $white;
+    background-color: $warning;
+
+    &:hover {
+      background-color: darken($warning, 10%);
+    }
+  }
+
+  &-dark {
+    border-color: $dark;
+    color: $white;
+    background-color: $dark;
+
+    &:hover {
+      background-color: darken($dark, 10%);
+    }
+  }
+
+  &-outline-primary {
+    border-color: $primary;
+    color: $primary;
+
+    &:hover {
+      color: $white;
+      background-color: $primary;
+    }
+  }
+
+  &-outline-succes {
+    border-color: $succes;
+    color: $succes;
+
+    &:hover {
+      color: $white;
+      background-color: $succes;
+    }
+  }
+
+  &-outline-danger {
+    border-color: $danger;
+    color: $danger;
+
+    &:hover {
+      color: $white;
+      background-color: $danger;
+    }
+  }
+
+  &-outline-warning {
+    border-color: $warning;
+    color: $warning;
+
+    &:hover {
+      color: $white;
+      background-color: $warning;
+    }
+  }
+
+  &-outline-dark {
+    border-color: $dark;
+    color: $dark;
+
+    &:hover {
+      color: $white;
+      background-color: $dark;
+    }
+  }
+}

@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+* {
+  font-family: "Roboto", sans-serif; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 42px; }
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1140px; }
+
+.active {
+  color: #ea2e41; }
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #025fff;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: #343a40;
+  background-color: transparent;
+  transition: all 0.2s;
+  cursor: pointer; }
+  .btn-block {
+    display: block;
+    width: 100%; }
+  .btn-primary {
+    border-color: #025fff;
+    color: #ffff;
+    background-color: #025fff; }
+    .btn-primary:hover {
+      background-color: #004cce; }
+  .btn-succes {
+    border-color: #2a9224;
+    color: #ffff;
+    background-color: #2a9224; }
+    .btn-succes:hover {
+      background-color: #1e691a; }
+  .btn-danger {
+    border-color: #ea2e41;
+    color: #ffff;
+    background-color: #ea2e41; }
+    .btn-danger:hover {
+      background-color: #d01528; }
+  .btn-warning {
+    border-color: #ffc907;
+    color: #ffff;
+    background-color: #ffc907; }
+    .btn-warning:hover {
+      background-color: #d3a500; }
+  .btn-dark {
+    border-color: #343a40;
+    color: #ffff;
+    background-color: #343a40; }
+    .btn-dark:hover {
+      background-color: #1d2124; }
+  .btn-outline-primary {
+    border-color: #025fff;
+    color: #025fff; }
+    .btn-outline-primary:hover {
+      color: #ffff;
+      background-color: #025fff; }
+  .btn-outline-succes {
+    border-color: #2a9224;
+    color: #2a9224; }
+    .btn-outline-succes:hover {
+      color: #ffff;
+      background-color: #2a9224; }
+  .btn-outline-danger {
+    border-color: #ea2e41;
+    color: #ea2e41; }
+    .btn-outline-danger:hover {
+      color: #ffff;
+      background-color: #ea2e41; }
+  .btn-outline-warning {
+    border-color: #ffc907;
+    color: #ffc907; }
+    .btn-outline-warning:hover {
+      color: #ffff;
+      background-color: #ffc907; }
+  .btn-outline-dark {
+    border-color: #343a40;
+    color: #343a40; }
+    .btn-outline-dark:hover {
+      color: #ffff;
+      background-color: #343a40; }
+
+.text-center {
+  text-align: center; }
+
+.block-center {
+  margin: 0 auto; }
+
+.hidden {
+  visibility: hidden; }
+
+.visible {
+  visibility: visible; }
+
+.d-none {
+  display: none; }
+
+.d-block {
+  display: block; }
+
+.d-flex {
+  display: flex; }
+
+.f-centered {
+  align-items: center;
+  justify-content: center; }
+
+.f-space-around {
+  justify-content: space-around; }
+
+.f-space-between {
+  justify-content: space-between; }
+
+.fs-12 {
+  font-style: 12px; }
+
+.fs-14 {
+  font-style: 14px; }
+
+.fs-16 {
+  font-size: 16px; }
+
+.fs-20 {
+  font-style: 20px; }
+
+.fs-24 {
+  font-style: 24px; }
+
+.fs-36 {
+  font-style: 36px; }
+
+.fs-42 {
+  font-style: 42px; }
+
+.bold {
+  font-weight: bold; }
+
+.thin {
+  font-weight: 300; }
+
+.italic {
+  font-style: italic; }
+
+.text-color-primary {
+  color: #025fff; }
+
+.text-color-succes {
+  color: #2a9224; }
+
+.text-color-danger {
+  color: #ea2e41; }
+
+.text-color-warning {
+  color: #ffc907; }
+
+.text-color-dark {
+  color: #343a40; }
+
+.m10 {
+  margin: 10px; }
+
+.m20 {
+  margin: 20px; }
+
+.mt10 {
+  margin-top: 10px; }
+
+.mr10 {
+  margin-right: 10px; }
+
+.mb10 {
+  margin-bottom: 10px; }
+
+.ml10 {
+  margin-left: 10px; }
+
+.mt20 {
+  margin-top: 20px; }
+
+.mr20 {
+  margin-right: 20px; }
+
+.mb20 {
+  margin-bottom: 20px; }
+
+.ml20 {
+  margin-left: 20px; }
+
+.p10 {
+  padding: 10px; }
+
+.p20 {
+  padding: 20px; }
+
+.pt10 {
+  padding-top: 10px; }
+
+.pr10 {
+  padding-right: 10px; }
+
+.pb10 {
+  padding-bottom: 10px; }
+
+.pl10 {
+  padding-left: 10px; }
+
+.pt20 {
+  padding-top: 20px; }
+
+.pr20 {
+  padding-right: 20px; }
+
+.pb20 {
+  padding-bottom: 20px; }
+
+.pl20 {
+  padding-left: 20px; }
+
+.w-100 {
+  width: 100%; }
+
+.w-50 {
+  width: 50%; }
+
+.w-300 {
+  width: 300px; }
+
+.w-500 {
+  width: 500px; }
+
+.h-100 {
+  height: 100%; }
+
+.h-50 {
+  height: 50%; }
+
+.h-300 {
+  height: 300px; }
+
+.h-500 {
+  height: 500px; }
