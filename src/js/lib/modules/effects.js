@@ -28,7 +28,7 @@ $.prototype.animateOverTime = function(duration, callback, finaly) {
 
 $.prototype.fadeIn = function(duration, display, finaly) {
   for (let i = 0; i < this.length; i ++) {
-    this[i].style.display = display || "block"; //параметр по умолчанию
+    this[i].style.display = display || "block";
 
     const _fadeIn = (complection) => {
       this[i].style.opacity = complection;
@@ -47,13 +47,41 @@ $.prototype.fadeOut = function(duration, finaly) {
     const _fadeOut = (complection) => {
       this[i].style.opacity = 1 - complection;
 
-      if (complection === 1) {
+      if (complection == 1) {
         this[i].style.display = "none";
       }
     }
 
     const animation = this.animateOverTime(duration, _fadeOut, finaly);
     requestAnimationFrame(animation);
+  }
+
+  return this;
+};
+
+$.prototype.fadeToggle = function(duration, display, finaly) {
+  for (let i = 0; i < this.length; i ++) {
+    if (window.getComputedStyle(this[i]).display === "none") {
+      this[i].style.display = display || "block";
+
+      const _fadeIn = (complection) => {
+        this[i].style.opacity = complection;
+      }
+
+      const animation = this.animateOverTime(duration, _fadeIn, finaly);
+      requestAnimationFrame(animation);
+    } else {
+      const _fadeOut = (complection) => {
+      this[i].style.opacity = 1 - complection;
+
+      if (complection == 1) {
+        this[i].style.display = "none";
+      }
+      }
+
+      const animation = this.animateOverTime(duration, _fadeOut, finaly);
+      requestAnimationFrame(animation);
+      }
   }
 
   return this;

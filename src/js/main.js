@@ -1,21 +1,78 @@
-import "./lib/lib";
+import $ from "./lib/lib";
 
-// $("button").click(function() {
-//   $("div").eq(2).toggleClass("active")
-// });
+$("#first").on("click", function() {
+  $(".content").eq(0).fadeToggle(800)
+});
 
-// $("div").click(function() {
-//   console.log($(this).index())
-// });
+$("[data-count='second']").on("click", function() {
+  $(".content").eq(1).fadeToggle(800)
+});
 
-// console.log($("button").html("Кликни"))
+$("button").eq(2).on("click", function() {
+  $(".content").fadeToggle(800)
+});
 
-// console.log($("div").eq(2).find(".some"))
+// $(".wrap").html(
+//   `
+//   <div class="dropdown m-20">
+//     <button class="btn btn-primary dropdown-toggle" name="kdlsk" id="dropDownMenuButton">Dropdown button</button>
+//     <div class="dropdown-menu" data-dopdown-id="dropDownMenuButton">
+//         <a href="#" class="dropdown-item">Action #1</a>
+//         <a href="#" class="dropdown-item">Action #2</a>
+//         <a href="#" class="dropdown-item">Action #3</a>
+//     </div>
+//   </div>
+//   `
+// )
 
-// console.log($(".some").closest(".findmes"))
+$(".dropdown-toggle").dropdown();
 
-// console.log($(".d").siblings())
+$("[data-toggle=modal]").modal();
 
-// console.log($(".findme").siblings())
+$("#trigger").on("click", function() {
+  $("#trigger").createModal({
+    text: {
+      title: "Modal title 2",
+      body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, quidem veritatis aperiam accusamus numquam impedit officiis quasi obcaecati non tenetur iusto, totam eligendi dolorum rerum accusantium mollitia neque cum! Perspiciatis!"
+    },
+    btns: {
+      count: 3,
+      settings: [
+        [
+          "close",
+          ["btn-danger", "mr-20"],
+          true
+        ],
+        [
+          "Save changes",
+          ["btn-succes"],
+          false,
+          () => {
+            alert("Данные сохранены");
+          }
+        ],
+        [
+          "Another btn",
+          ["btn-warning", "ml-10"],
+          false,
+          () => {
+            alert("Hello World")
+          }
+        ]
+      ]
+    }
+  });
+});
 
-// $("button").fadeIn(5000);
+$("[data-tabpanel] .tab-item").tab();
+
+$(".accordion-header").accordion();
+
+$(".carousel").carousel({
+  slides: 3,
+  autoPlay: true,
+  indicator: true
+});
+
+$().get("https://jsonplaceholder.typicode.com/todos/1")
+  .then(res => console.log(res))

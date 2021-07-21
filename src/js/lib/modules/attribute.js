@@ -1,6 +1,18 @@
 import $ from '../core';
 
-$.prototype.addAttribute = function(...attribute) {
+$.prototype.getAttribute = function(...attribute) {
+  for (let i = 0; i < this.length; i++) {
+    if (!this[i].getAttribute) {
+      continue;
+    }
+
+    this[i].getAttribute(...attribute);
+  }
+
+  return this;
+}
+
+$.prototype.setAttribute = function(...attribute) {
   for (let i = 0; i < this.length; i++) {
     if (!this[i].setAttribute) {
       continue;
@@ -8,6 +20,8 @@ $.prototype.addAttribute = function(...attribute) {
 
     this[i].setAttribute(...attribute);
   }
+
+  return this;
 }
 
 $.prototype.removeAttribute = function(...attribute) {
@@ -18,6 +32,8 @@ $.prototype.removeAttribute = function(...attribute) {
 
     this[i].removeAttribute(...attribute);
   }
+
+  return this;
 }
 
 $.prototype.toggleAttribute = function(...attribute) {
@@ -32,4 +48,6 @@ $.prototype.toggleAttribute = function(...attribute) {
       this[i].setAttribute(...attribute);
     }
   }
+
+  return this;
 }
